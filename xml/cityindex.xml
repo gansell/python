@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<cityindex>
+  <title>Index of major German cities</title>
+  <entry>
+    <city>Berlin</city>
+    <region>Berlin</region>
+    <country>Deutschland</country>
+    <area_km2>891.02</area_km2>
+    <inhabitants>3460725</inhabitants>
+    <inhabitants_per_km2>3884</inhabitants_per_km2>
+    <development_2000_2010>2.32</development_2000_2010>
+    <major_since>1747</major_since>
+    <description>Berlin ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Hamburg</city>
+    <region>Hamburg</region>
+    <country>Deutschland</country>
+    <area_km2>755.25</area_km2>
+    <inhabitants>1786448</inhabitants>
+    <inhabitants_per_km2>2365</inhabitants_per_km2>
+    <development_2000_2010>4.14</development_2000_2010>
+    <major_since>1787</major_since>
+    <description>Hamburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>München</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>310.40</area_km2>
+    <inhabitants>1353186</inhabitants>
+    <inhabitants_per_km2>4359</inhabitants_per_km2>
+    <development_2000_2010>11.81</development_2000_2010>
+    <major_since>1852</major_since>
+    <description>München ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Köln</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>405.17</area_km2>
+    <inhabitants>1007119</inhabitants>
+    <inhabitants_per_km2>2486</inhabitants_per_km2>
+    <development_2000_2010>4.59</development_2000_2010>
+    <major_since>1852</major_since>
+    <description>Köln ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Frankfurt am Main</city>
+    <region>Hessen</region>
+    <country>Deutschland</country>
+    <area_km2>248.31</area_km2>
+    <inhabitants>679664</inhabitants>
+    <inhabitants_per_km2>2737</inhabitants_per_km2>
+    <development_2000_2010>4.80</development_2000_2010>
+    <major_since>1875</major_since>
+    <description>Frankfurt am Main ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Stuttgart</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>207.35</area_km2>
+    <inhabitants>606588</inhabitants>
+    <inhabitants_per_km2>2925</inhabitants_per_km2>
+    <development_2000_2010>3.89</development_2000_2010>
+    <major_since>1874</major_since>
+    <description>Stuttgart ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Düsseldorf</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>217.22</area_km2>
+    <inhabitants>588735</inhabitants>
+    <inhabitants_per_km2>2710</inhabitants_per_km2>
+    <development_2000_2010>3.40</development_2000_2010>
+    <major_since>1882</major_since>
+    <description>Düsseldorf ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Dortmund</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>280.42</area_km2>
+    <inhabitants>580444</inhabitants>
+    <inhabitants_per_km2>2070</inhabitants_per_km2>
+    <development_2000_2010>-1.45</development_2000_2010>
+    <major_since>1894</major_since>
+    <description>Dortmund ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Essen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>210.31</area_km2>
+    <inhabitants>574635</inhabitants>
+    <inhabitants_per_km2>2732</inhabitants_per_km2>
+    <development_2000_2010>-3.46</development_2000_2010>
+    <major_since>1896</major_since>
+    <description>Essen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bremen</city>
+    <region>Bremen</region>
+    <country>Deutschland</country>
+    <area_km2>325.42</area_km2>
+    <inhabitants>547340</inhabitants>
+    <inhabitants_per_km2>1682</inhabitants_per_km2>
+    <development_2000_2010>1.47</development_2000_2010>
+    <major_since>1875</major_since>
+    <description>Bremen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Dresden</city>
+    <region>Sachsen</region>
+    <country>Deutschland</country>
+    <area_km2>328.31</area_km2>
+    <inhabitants>523058</inhabitants>
+    <inhabitants_per_km2>1593</inhabitants_per_km2>
+    <development_2000_2010>9.47</development_2000_2010>
+    <major_since>1852</major_since>
+    <description>Dresden ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Leipzig</city>
+    <region>Sachsen</region>
+    <country>Deutschland</country>
+    <area_km2>297.36</area_km2>
+    <inhabitants>522883</inhabitants>
+    <inhabitants_per_km2>1758</inhabitants_per_km2>
+    <development_2000_2010>6.02</development_2000_2010>
+    <major_since>1871</major_since>
+    <description>Leipzig ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Hannover</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>204.14</area_km2>
+    <inhabitants>522686</inhabitants>
+    <inhabitants_per_km2>2560</inhabitants_per_km2>
+    <development_2000_2010>1.49</development_2000_2010>
+    <major_since>1875</major_since>
+    <description>Hannover ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Nürnberg</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>186.40</area_km2>
+    <inhabitants>505664</inhabitants>
+    <inhabitants_per_km2>2713</inhabitants_per_km2>
+    <development_2000_2010>3.53</development_2000_2010>
+    <major_since>1881</major_since>
+    <description>Nürnberg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Duisburg</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>232.81</area_km2>
+    <inhabitants>489599</inhabitants>
+    <inhabitants_per_km2>2103</inhabitants_per_km2>
+    <development_2000_2010>-4.92</development_2000_2010>
+    <major_since>1904</major_since>
+    <description>Duisburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bochum</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>145.46</area_km2>
+    <inhabitants>374737</inhabitants>
+    <inhabitants_per_km2>2576</inhabitants_per_km2>
+    <development_2000_2010>-4.20</development_2000_2010>
+    <major_since>1904</major_since>
+    <description>Bochum ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Wuppertal</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>168.41</area_km2>
+    <inhabitants>349721</inhabitants>
+    <inhabitants_per_km2>2077</inhabitants_per_km2>
+    <development_2000_2010>-4.56</development_2000_2010>
+    <major_since>1884</major_since>
+    <description>Wuppertal ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bonn</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>141.22</area_km2>
+    <inhabitants>324899</inhabitants>
+    <inhabitants_per_km2>2301</inhabitants_per_km2>
+    <development_2000_2010>7.49</development_2000_2010>
+    <major_since>1934</major_since>
+    <description>Bonn ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bielefeld</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>257.91</area_km2>
+    <inhabitants>323270</inhabitants>
+    <inhabitants_per_km2>1253</inhabitants_per_km2>
+    <development_2000_2010>0.47</development_2000_2010>
+    <major_since>1930</major_since>
+    <description>Bielefeld ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Mannheim</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>144.96</area_km2>
+    <inhabitants>313174</inhabitants>
+    <inhabitants_per_km2>2160</inhabitants_per_km2>
+    <development_2000_2010>2.10</development_2000_2010>
+    <major_since>1897</major_since>
+    <description>Mannheim ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Karlsruhe</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>173.46</area_km2>
+    <inhabitants>294761</inhabitants>
+    <inhabitants_per_km2>1699</inhabitants_per_km2>
+    <development_2000_2010>5.82</development_2000_2010>
+    <major_since>1901</major_since>
+    <description>Karlsruhe ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Münster</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>302.96</area_km2>
+    <inhabitants>279803</inhabitants>
+    <inhabitants_per_km2>924</inhabitants_per_km2>
+    <development_2000_2010>5.34</development_2000_2010>
+    <major_since>1915</major_since>
+    <description>Münster ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Wiesbaden</city>
+    <region>Hessen</region>
+    <country>Deutschland</country>
+    <area_km2>203.90</area_km2>
+    <inhabitants>275976</inhabitants>
+    <inhabitants_per_km2>1353</inhabitants_per_km2>
+    <development_2000_2010>2.17</development_2000_2010>
+    <major_since>1905</major_since>
+    <description>Wiesbaden ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Augsburg</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>146.86</area_km2>
+    <inhabitants>264708</inhabitants>
+    <inhabitants_per_km2>1802</inhabitants_per_km2>
+    <development_2000_2010>3.81</development_2000_2010>
+    <major_since>1909</major_since>
+    <description>Augsburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Aachen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>160.84</area_km2>
+    <inhabitants>258664</inhabitants>
+    <inhabitants_per_km2>1608</inhabitants_per_km2>
+    <development_2000_2010>5.84</development_2000_2010>
+    <major_since>1888</major_since>
+    <description>Aachen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Mönchengladbach</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>170.45</area_km2>
+    <inhabitants>257993</inhabitants>
+    <inhabitants_per_km2>1514</inhabitants_per_km2>
+    <development_2000_2010>-1.91</development_2000_2010>
+    <major_since>1921</major_since>
+    <description>Mönchengladbach ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Gelsenkirchen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>104.86</area_km2>
+    <inhabitants>257981</inhabitants>
+    <inhabitants_per_km2>2460</inhabitants_per_km2>
+    <development_2000_2010>-7.43</development_2000_2010>
+    <major_since>1903</major_since>
+    <description>Gelsenkirchen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Braunschweig</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>191.85</area_km2>
+    <inhabitants>248867</inhabitants>
+    <inhabitants_per_km2>1297</inhabitants_per_km2>
+    <development_2000_2010>1.24</development_2000_2010>
+    <major_since>1890</major_since>
+    <description>Braunschweig ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Chemnitz</city>
+    <region>Sachsen</region>
+    <country>Deutschland</country>
+    <area_km2>220.85</area_km2>
+    <inhabitants>243248</inhabitants>
+    <inhabitants_per_km2>1101</inhabitants_per_km2>
+    <development_2000_2010>-6.17</development_2000_2010>
+    <major_since>1883</major_since>
+    <description>Chemnitz ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Kiel</city>
+    <region>Schleswig-Holstein</region>
+    <country>Deutschland</country>
+    <area_km2>118.65</area_km2>
+    <inhabitants>239526</inhabitants>
+    <inhabitants_per_km2>2019</inhabitants_per_km2>
+    <development_2000_2010>2.97</development_2000_2010>
+    <major_since>1898</major_since>
+    <description>Kiel ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Krefeld</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>137.75</area_km2>
+    <inhabitants>235076</inhabitants>
+    <inhabitants_per_km2>1707</inhabitants_per_km2>
+    <development_2000_2010>-2.02</development_2000_2010>
+    <major_since>1888</major_since>
+    <description>Krefeld ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Halle (Saale)</city>
+    <region>Sachsen-Anhalt</region>
+    <country>Deutschland</country>
+    <area_km2>135.02</area_km2>
+    <inhabitants>232963</inhabitants>
+    <inhabitants_per_km2>1725</inhabitants_per_km2>
+    <development_2000_2010>-5.96</development_2000_2010>
+    <major_since>1890</major_since>
+    <description>Halle (Saale) ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Magdeburg</city>
+    <region>Sachsen-Anhalt</region>
+    <country>Deutschland</country>
+    <area_km2>200.97</area_km2>
+    <inhabitants>231549</inhabitants>
+    <inhabitants_per_km2>1152</inhabitants_per_km2>
+    <development_2000_2010>0.04</development_2000_2010>
+    <major_since>1882</major_since>
+    <description>Magdeburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Freiburg im Breisgau</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>153.06</area_km2>
+    <inhabitants>224191</inhabitants>
+    <inhabitants_per_km2>1465</inhabitants_per_km2>
+    <development_2000_2010>9.31</development_2000_2010>
+    <major_since>1934</major_since>
+    <description>Freiburg im Breisgau ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Oberhausen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>77.11</area_km2>
+    <inhabitants>212945</inhabitants>
+    <inhabitants_per_km2>2762</inhabitants_per_km2>
+    <development_2000_2010>-4.14</development_2000_2010>
+    <major_since>1914</major_since>
+    <description>Oberhausen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Lübeck</city>
+    <region>Schleswig-Holstein</region>
+    <country>Deutschland</country>
+    <area_km2>214.20</area_km2>
+    <inhabitants>210232</inhabitants>
+    <inhabitants_per_km2>981</inhabitants_per_km2>
+    <development_2000_2010>-1.48</development_2000_2010>
+    <major_since>1912</major_since>
+    <description>Lübeck ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Erfurt</city>
+    <region>Thüringen</region>
+    <country>Deutschland</country>
+    <area_km2>269.10</area_km2>
+    <inhabitants>204994</inhabitants>
+    <inhabitants_per_km2>762</inhabitants_per_km2>
+    <development_2000_2010>2.21</development_2000_2010>
+    <major_since>1906</major_since>
+    <description>Erfurt ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Rostock</city>
+    <region>Mecklenburg-Vorpommern</region>
+    <country>Deutschland</country>
+    <area_km2>181.42</area_km2>
+    <inhabitants>202735</inhabitants>
+    <inhabitants_per_km2>1117</inhabitants_per_km2>
+    <development_2000_2010>1.11</development_2000_2010>
+    <major_since>1935</major_since>
+    <description>Rostock ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Mainz</city>
+    <region>Rheinland-Pfalz</region>
+    <country>Deutschland</country>
+    <area_km2>97.74</area_km2>
+    <inhabitants>199237</inhabitants>
+    <inhabitants_per_km2>2038</inhabitants_per_km2>
+    <development_2000_2010>8.95</development_2000_2010>
+    <major_since>1908</major_since>
+    <description>Mainz ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Kassel</city>
+    <region>Hessen</region>
+    <country>Deutschland</country>
+    <area_km2>106.78</area_km2>
+    <inhabitants>195530</inhabitants>
+    <inhabitants_per_km2>1831</inhabitants_per_km2>
+    <development_2000_2010>0.39</development_2000_2010>
+    <major_since>1899</major_since>
+    <description>Kassel ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Hagen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>160.35</area_km2>
+    <inhabitants>188529</inhabitants>
+    <inhabitants_per_km2>1176</inhabitants_per_km2>
+    <development_2000_2010>-7.20</development_2000_2010>
+    <major_since>1928</major_since>
+    <description>Hagen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Hamm</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>226.25</area_km2>
+    <inhabitants>181783</inhabitants>
+    <inhabitants_per_km2>803</inhabitants_per_km2>
+    <development_2000_2010>-0.35</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Hamm ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Saarbrücken</city>
+    <region>Saarland</region>
+    <country>Deutschland</country>
+    <area_km2>167.09</area_km2>
+    <inhabitants>175741</inhabitants>
+    <inhabitants_per_km2>1052</inhabitants_per_km2>
+    <development_2000_2010>-4.10</development_2000_2010>
+    <major_since>1909</major_since>
+    <description>Saarbrücken ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Mülheim an der Ruhr</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>91.29</area_km2>
+    <inhabitants>167344</inhabitants>
+    <inhabitants_per_km2>1833</inhabitants_per_km2>
+    <development_2000_2010>-3.19</development_2000_2010>
+    <major_since>1908</major_since>
+    <description>Mülheim an der Ruhr ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Herne</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>51.41</area_km2>
+    <inhabitants>164762</inhabitants>
+    <inhabitants_per_km2>3205</inhabitants_per_km2>
+    <development_2000_2010>-5.60</development_2000_2010>
+    <major_since>1933</major_since>
+    <description>Herne ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Ludwigshafen am Rhein</city>
+    <region>Rheinland-Pfalz</region>
+    <country>Deutschland</country>
+    <area_km2>77.55</area_km2>
+    <inhabitants>164177</inhabitants>
+    <inhabitants_per_km2>2117</inhabitants_per_km2>
+    <development_2000_2010>0.49</development_2000_2010>
+    <major_since>1921</major_since>
+    <description>Ludwigshafen am Rhein ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Osnabrück</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>119.80</area_km2>
+    <inhabitants>164119</inhabitants>
+    <inhabitants_per_km2>1370</inhabitants_per_km2>
+    <development_2000_2010>0.01</development_2000_2010>
+    <major_since>1939</major_since>
+    <description>Osnabrück ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Oldenburg</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>102.97</area_km2>
+    <inhabitants>162173</inhabitants>
+    <inhabitants_per_km2>1575</inhabitants_per_km2>
+    <development_2000_2010>4.74</development_2000_2010>
+    <major_since>1946</major_since>
+    <description>Oldenburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Leverkusen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>78.87</area_km2>
+    <inhabitants>160772</inhabitants>
+    <inhabitants_per_km2>2038</inhabitants_per_km2>
+    <development_2000_2010>-0.17</development_2000_2010>
+    <major_since>1963</major_since>
+    <description>Leverkusen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Solingen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>89.48</area_km2>
+    <inhabitants>159927</inhabitants>
+    <inhabitants_per_km2>1787</inhabitants_per_km2>
+    <development_2000_2010>-3.06</development_2000_2010>
+    <major_since>1929</major_since>
+    <description>Solingen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Potsdam</city>
+    <region>Brandenburg</region>
+    <country>Deutschland</country>
+    <area_km2>187.29</area_km2>
+    <inhabitants>156906</inhabitants>
+    <inhabitants_per_km2>838</inhabitants_per_km2>
+    <development_2000_2010>21.33</development_2000_2010>
+    <major_since>1939</major_since>
+    <description>Potsdam ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Neuss</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>99.53</area_km2>
+    <inhabitants>151388</inhabitants>
+    <inhabitants_per_km2>1521</inhabitants_per_km2>
+    <development_2000_2010>0.92</development_2000_2010>
+    <major_since>1963</major_since>
+    <description>Neuss ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Heidelberg</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>108.83</area_km2>
+    <inhabitants>147312</inhabitants>
+    <inhabitants_per_km2>1354</inhabitants_per_km2>
+    <development_2000_2010>5.03</development_2000_2010>
+    <major_since>1946</major_since>
+    <description>Heidelberg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Paderborn</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>179.51</area_km2>
+    <inhabitants>146283</inhabitants>
+    <inhabitants_per_km2>815</inhabitants_per_km2>
+    <development_2000_2010>5.18</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Paderborn ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Darmstadt</city>
+    <region>Hessen</region>
+    <country>Deutschland</country>
+    <area_km2>122.09</area_km2>
+    <inhabitants>144402</inhabitants>
+    <inhabitants_per_km2>1183</inhabitants_per_km2>
+    <development_2000_2010>4.46</development_2000_2010>
+    <major_since>1937</major_since>
+    <description>Darmstadt ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Regensburg</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>80.68</area_km2>
+    <inhabitants>135520</inhabitants>
+    <inhabitants_per_km2>1680</inhabitants_per_km2>
+    <development_2000_2010>7.83</development_2000_2010>
+    <major_since>1940</major_since>
+    <description>Regensburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Würzburg</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>87.63</area_km2>
+    <inhabitants>133799</inhabitants>
+    <inhabitants_per_km2>1527</inhabitants_per_km2>
+    <development_2000_2010>4.56</development_2000_2010>
+    <major_since>1932</major_since>
+    <description>Würzburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Ingolstadt</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>133.35</area_km2>
+    <inhabitants>125088</inhabitants>
+    <inhabitants_per_km2>938</inhabitants_per_km2>
+    <development_2000_2010>8.09</development_2000_2010>
+    <major_since>1989</major_since>
+    <description>Ingolstadt ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Heilbronn</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>99.88</area_km2>
+    <inhabitants>122879</inhabitants>
+    <inhabitants_per_km2>1230</inhabitants_per_km2>
+    <development_2000_2010>3.00</development_2000_2010>
+    <major_since>1970</major_since>
+    <description>Heilbronn ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Ulm</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>118.69</area_km2>
+    <inhabitants>122801</inhabitants>
+    <inhabitants_per_km2>1035</inhabitants_per_km2>
+    <development_2000_2010>4.75</development_2000_2010>
+    <major_since>1980</major_since>
+    <description>Ulm ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Wolfsburg</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>204.03</area_km2>
+    <inhabitants>121451</inhabitants>
+    <inhabitants_per_km2>595</inhabitants_per_km2>
+    <development_2000_2010>-0.29</development_2000_2010>
+    <major_since>1972</major_since>
+    <description>Wolfsburg ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Göttingen</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>117.29</area_km2>
+    <inhabitants>121060</inhabitants>
+    <inhabitants_per_km2>1032</inhabitants_per_km2>
+    <development_2000_2010>-2.47</development_2000_2010>
+    <major_since>1964</major_since>
+    <description>Göttingen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Offenbach am Main</city>
+    <region>Hessen</region>
+    <country>Deutschland</country>
+    <area_km2>44.90</area_km2>
+    <inhabitants>120435</inhabitants>
+    <inhabitants_per_km2>2682</inhabitants_per_km2>
+    <development_2000_2010>2.47</development_2000_2010>
+    <major_since>1954</major_since>
+    <description>Offenbach am Main ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Pforzheim</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>98.02</area_km2>
+    <inhabitants>119781</inhabitants>
+    <inhabitants_per_km2>1222</inhabitants_per_km2>
+    <development_2000_2010>2.24</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Pforzheim ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Recklinghausen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>66.42</area_km2>
+    <inhabitants>118365</inhabitants>
+    <inhabitants_per_km2>1782</inhabitants_per_km2>
+    <development_2000_2010>-5.14</development_2000_2010>
+    <major_since>1949</major_since>
+    <description>Recklinghausen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bottrop</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>100.61</area_km2>
+    <inhabitants>116771</inhabitants>
+    <inhabitants_per_km2>1161</inhabitants_per_km2>
+    <development_2000_2010>-3.18</development_2000_2010>
+    <major_since>1953</major_since>
+    <description>Bottrop ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Fürth</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>63.35</area_km2>
+    <inhabitants>114628</inhabitants>
+    <inhabitants_per_km2>1809</inhabitants_per_km2>
+    <development_2000_2010>3.76</development_2000_2010>
+    <major_since>1950</major_since>
+    <description>Fürth ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bremerhaven</city>
+    <region>Bremen</region>
+    <country>Deutschland</country>
+    <area_km2>78.86</area_km2>
+    <inhabitants>113366</inhabitants>
+    <inhabitants_per_km2>1438</inhabitants_per_km2>
+    <development_2000_2010>-6.17</development_2000_2010>
+    <major_since>1939</major_since>
+    <description>Bremerhaven ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Reutlingen</city>
+    <region>Baden-Württemberg</region>
+    <country>Deutschland</country>
+    <area_km2>87.06</area_km2>
+    <inhabitants>112484</inhabitants>
+    <inhabitants_per_km2>1292</inhabitants_per_km2>
+    <development_2000_2010>1.66</development_2000_2010>
+    <major_since>1988</major_since>
+    <description>Reutlingen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Remscheid</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>74.60</area_km2>
+    <inhabitants>110563</inhabitants>
+    <inhabitants_per_km2>1482</inhabitants_per_km2>
+    <development_2000_2010>-7.31</development_2000_2010>
+    <major_since>1929</major_since>
+    <description>Remscheid ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Koblenz</city>
+    <region>Rheinland-Pfalz</region>
+    <country>Deutschland</country>
+    <area_km2>105.04</area_km2>
+    <inhabitants>106417</inhabitants>
+    <inhabitants_per_km2>1013</inhabitants_per_km2>
+    <development_2000_2010>-1.42</development_2000_2010>
+    <major_since>1962</major_since>
+    <description>Koblenz ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Bergisch Gladbach</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>83.11</area_km2>
+    <inhabitants>105723</inhabitants>
+    <inhabitants_per_km2>1272</inhabitants_per_km2>
+    <development_2000_2010>0.03</development_2000_2010>
+    <major_since>1977</major_since>
+    <description>Bergisch Gladbach ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Erlangen</city>
+    <region>Bayern</region>
+    <country>Deutschland</country>
+    <area_km2>76.82</area_km2>
+    <inhabitants>105629</inhabitants>
+    <inhabitants_per_km2>1375</inhabitants_per_km2>
+    <development_2000_2010>4.81</development_2000_2010>
+    <major_since>1974</major_since>
+    <description>Erlangen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Moers</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>67.69</area_km2>
+    <inhabitants>105506</inhabitants>
+    <inhabitants_per_km2>1559</inhabitants_per_km2>
+    <development_2000_2010>-1.45</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Moers ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Trier</city>
+    <region>Rheinland-Pfalz</region>
+    <country>Deutschland</country>
+    <area_km2>117.15</area_km2>
+    <inhabitants>105260</inhabitants>
+    <inhabitants_per_km2>899</inhabitants_per_km2>
+    <development_2000_2010>5.88</development_2000_2010>
+    <major_since>1969</major_since>
+    <description>Trier ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Jena</city>
+    <region>Thüringen</region>
+    <country>Deutschland</country>
+    <area_km2>114.48</area_km2>
+    <inhabitants>105129</inhabitants>
+    <inhabitants_per_km2>918</inhabitants_per_km2>
+    <development_2000_2010>5.24</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Jena ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Siegen</city>
+    <region>Nordrhein-Westfalen</region>
+    <country>Deutschland</country>
+    <area_km2>114.67</area_km2>
+    <inhabitants>103424</inhabitants>
+    <inhabitants_per_km2>902</inhabitants_per_km2>
+    <development_2000_2010>-4.66</development_2000_2010>
+    <major_since>1975</major_since>
+    <description>Siegen ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Hildesheim</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>92.17</area_km2>
+    <inhabitants>102794</inhabitants>
+    <inhabitants_per_km2>1115</inhabitants_per_km2>
+    <development_2000_2010>-1.07</development_2000_2010>
+    <major_since>1974</major_since>
+    <description>Hildesheim ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Salzgitter</city>
+    <region>Niedersachsen</region>
+    <country>Deutschland</country>
+    <area_km2>223.90</area_km2>
+    <inhabitants>102394</inhabitants>
+    <inhabitants_per_km2>462</inhabitants_per_km2>
+    <development_2000_2010>-8.82</development_2000_2010>
+    <major_since>1942</major_since>
+    <description>Salzgitter ist eine deutsche Großstadt.</description>
+  </entry>
+  <entry>
+    <city>Cottbus</city>
+    <region>Brandenburg</region>
+    <country>Deutschland</country>
+    <area_km2>164.28</area_km2>
+    <inhabitants>102091</inhabitants>
+    <inhabitants_per_km2>621</inhabitants_per_km2>
+    <development_2000_2010>-5.90</development_2000_2010>
+    <major_since>1976</major_since>
+    <description>Cottbus ist eine deutsche Großstadt.</description>
+  </entry>
+</cityindex>

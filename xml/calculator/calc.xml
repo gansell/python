@@ -1,0 +1,15 @@
+<add>
+  <num>1.0</num>
+  <num>2.0</num>
+  <mul>
+    <num>1.5</num>
+    <num>2</num>
+    <add>
+      <num>2</num>
+      <mul>
+        <num>3.5</num>
+        <num>4</num>
+      </mul>
+    </add>
+  </mul>
+</add>

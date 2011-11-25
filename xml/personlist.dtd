@@ -1,0 +1,28 @@
+<!ELEMENT personlist (person*)>
+
+<!ELEMENT person (firstname,lastname,title?,address?,birthday?)>
+<!ATTLIST person
+    id ID #REQUIRED
+>
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+
+<!ELEMENT address (street,zip,city,country)>
+
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST country
+    zip-prefix CDATA #IMPLIED
+>
+
+<!ELEMENT birthday (day,month,year)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ATTLIST month
+    number CDATA #REQUIRED
+>

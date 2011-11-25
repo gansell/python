@@ -1,0 +1,122 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Running the Tests &mdash; pip v0.8.2 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pip v0.8.2 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="running-the-tests">
+<h1>Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p>Pip uses some system tools - VCS related tools - in its tests, so you need to
+intall them (Linux):</p>
+<div class="highlight-python"><pre>sudo apt-get install subversion bzr git-core mercurial</pre>
+</div>
+<p>Or downloading and installing <a class="reference external" href="http://subversion.apache.org/packages.html">Subversion</a>, <a class="reference external" href="http://wiki.bazaar.canonical.com/Download">Bazaar</a>, <a class="reference external" href="http://git-scm.com/download">Git</a> and <a class="reference external" href="http://mercurial.selenic.com/downloads/">Mercurial</a> manually.</p>
+</div>
+<div class="section" id="how-to-run-tests">
+<h2>How To Run Tests<a class="headerlink" href="#how-to-run-tests" title="Permalink to this headline">¶</a></h2>
+<p>After all requirements (system and python) are installed,
+just run the following command:</p>
+<div class="highlight-python"><pre>$ python setup.py test</pre>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="locale-warnings">
+<h3>Locale Warnings<a class="headerlink" href="#locale-warnings" title="Permalink to this headline">¶</a></h3>
+<p>There was a problem with locales configuration when running tests in a Hudson
+CI Server that broke some tests. The problem was not with pip, but with
+<cite>locales</cite> configuration. Hudson was not setting LANG environment variable
+correctly, so the solution to fix it was changing default language to
+en_US.UTF-8.
+The following has been done in a Ubuntu Server 9.10 machine:</p>
+<div class="highlight-python"><pre>$ sudo locale-gen en_US en_US.UTF-8
+$ sudo dpkg-reconfigure locales
+$ sudo update-locale LANG=en_US.UTF-8</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Running the Tests</a><ul>
+<li><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li><a class="reference internal" href="#how-to-run-tests">How To Run Tests</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#locale-warnings">Locale Warnings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008-2011, The pip developers.
+      Last updated on Mar 06, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+
+* {
+/* hide everything that's not explicitly shown below */
+display: none;
+}
+
+cityindex {
+/* show document in full window width */
+display: table;
+width: 100%;
+margin: 10px;
+border: solid 1pt black;
+}
+
+title {
+/* main document title: centered table caption, large, blue  */
+display: table-caption;
+text-align: center;
+color: blue;
+font-size: 25pt;
+}
+
+entry {
+/* each city entry in one table row, using 12pt font */
+display: table-row;
+font-size: 12pt;
+}
+
+city, country, region, inhabitants, description {
+/* explicit list of city attributes to show in the table (overrides 'none' above), border on each cell */
+display: table-cell;
+padding: 2pt 1em 2pt 2pt; /* large padding right, small padding otherwise (1em == display size of an 'M') */
+border: solid 1pt;
+width: 15%;
+}
+
+city {
+/* mark city name in large, bold red letters, in a slightly larger table cell */
+width: 20%;
+color: darkred;
+font-size: 16pt;
+font-weight: bold;
+}
+
+city > * {
+/* mark all (visible) children of 'city' tag in blue */
+color: darkblue;
+}
+
+inhabitants {
+/* smaller cell for number of inhabitants, right aligned */
+width: 10%;
+text-align: right;
+}
+
+description {
+/* use larger table cell for description */
+width: 35%;
+}

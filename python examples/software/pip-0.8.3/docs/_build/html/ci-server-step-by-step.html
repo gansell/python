@@ -1,0 +1,292 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hudson CI server installation step by step &mdash; pip v0.8.2 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pip v0.8.2 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hudson-ci-server-installation-step-by-step">
+<h1>Hudson CI server installation step by step<a class="headerlink" href="#hudson-ci-server-installation-step-by-step" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-hudson">
+<h2>Why Hudson<a class="headerlink" href="#why-hudson" title="Permalink to this headline">¶</a></h2>
+<p>One of the advantages of <a class="reference external" href="hudson-ci.org/">Hudson</a> over
+<a class="reference external" href="http://buildbot.net/">Buildbot</a>, for instance, is that
+almost everything is done via its web interface. So anyone can
+manage the continuous integration server easily.
+Another advantage over the other alternatives is Hudson has many
+<a class="reference external" href="http://wiki.hudson-ci.org/display/HUDSON/Plugins">available plugins</a>,
+so you don&#8217;t need to write your own.</p>
+<p>Hudson runs on Java, so the next step is to install Java and its dependencies.</p>
+</div>
+<div class="section" id="java-and-its-dependencies">
+<h2>Java and its dependencies<a class="headerlink" href="#java-and-its-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>You can install all Java related packages this [not recommended] way:</p>
+<div class="highlight-python"><pre>$ [sudo] apt-get install ca-certificates-java daemon default-jre\
+&gt; default-jre-headless gcj-4.4-base gcj-4.4-jre-headless gcj-4.4-jre-lib\
+&gt; icedtea-6-jre-cacao java-common libaccess-bridge-java\
+&gt; libaccess-bridge-java-jni libgcj-common libgcj10 libjline-java \
+&gt; openjdk-6-jre openjdk-6-jre-headless openjdk-6-jre-lib\
+&gt; rhino tzdata-java tzdata</pre>
+</div>
+<p>Or try installing with the information in the next section and
+if you have problems, run:</p>
+<div class="highlight-python"><pre>$ [sudo] apt-get install -f</pre>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The recommended installation from <a class="reference external" href="http://hudson-ci.org/debian/">Hudson site for Debian users</a> is installing through the <cite>.deb</cite> package.
+The advantages are: you can automatically upgrade hudson via apt and
+use the <cite>service</cite> or <cite>/etc/init.d</cite> resource to start the daemon on boot.</p>
+<p>To install Hudson as they recommend, do the following:</p>
+<ul>
+<li><p class="first">Add the key to your system:</p>
+<div class="highlight-python"><pre>$ wget -O /tmp/key http://hudson-ci.org/debian/hudson-ci.org.key
+$ [sudo] apt-key add /tmp/key</pre>
+</div>
+</li>
+<li><p class="first">Then install Hudson:</p>
+<div class="highlight-python"><pre>$ wget -O /tmp/hudson.deb http://hudson-ci.org/latest/debian/hudson.deb
+$ [sudo] dpkg --install /tmp/hudson.deb</pre>
+</div>
+</li>
+</ul>
+<p>When you reboot the computer the web daemon will be started at
+<a class="reference external" href="http://localhost:8080">http://localhost:8080</a>. If you don&#8217;t want to reboot the computer, run:</p>
+<div class="highlight-python"><pre>$ [sudo] service hudson start
+or
+$ [sudo] /etc/init.d/hudson start</pre>
+</div>
+</div>
+<div class="section" id="apache">
+<h2>Apache<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h2>
+<p>It is not necessary for all users, but if you want to set up apache to run
+the web interface, you should follow this tutorial:
+<a class="reference external" href="http://wiki.hudson-ci.org/display/HUDSON/Running+Hudson+behind+Apache">http://wiki.hudson-ci.org/display/HUDSON/Running+Hudson+behind+Apache</a></p>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<p>Installing plugins in Hudson is very easy.
+Just click <em>Manage Hudson</em>, then <em>Manage Plugins</em>.
+The tab <em>Updates</em> shows all available updates to installed plugins.
+But what we need now is to install plugins. So we must go to the
+<em>Available</em> tab and check what we want to be installed and then press the
+<em>Install</em> button in the end of the page.</p>
+<p>The Hudson server hosted at <a class="reference external" href="http://ci.cloudsilverlining.org">http://ci.cloudsilverlining.org</a> has the following
+plugins installed for pip project:</p>
+<ul class="simple">
+<li>Hudson IRC Plugin</li>
+<li>Green Balls</li>
+<li>Hudson Continuous Integration game</li>
+<li>Hudson instant-messaging plugin</li>
+<li>Hudson Jabber notifier plugin</li>
+<li>Hudson Email Extension Plugin</li>
+<li>Hudson Mercurial plugin</li>
+</ul>
+</div>
+<div class="section" id="creating-a-job">
+<h2>Creating a Job<a class="headerlink" href="#creating-a-job" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="before-creating-a-job-for-pip">
+<h3>Before Creating a Job for pip<a class="headerlink" href="#before-creating-a-job-for-pip" title="Permalink to this headline">¶</a></h3>
+<p>Hudson manages &#8220;jobs&#8221;. Jobs are complete builds to Hudson. For instance,
+you want to build pip project and run its tests with nosetests.
+This section  assumes you have all needed <a class="reference external" href="running-tests.html#system-requirements">dependencies installed</a>.</p>
+<p>You need to set up some configuration in Hudson before creating your first job.
+Go to Hudson home page, &#8220;Manage Hudson&#8221;, then &#8220;Configure System&#8221;.</p>
+<p>In the Mercurial section, fill the &#8220;Add Mercurial&#8221; section with:</p>
+<ul class="simple">
+<li>Name: <cite>hg</cite></li>
+<li>Installation directory: <cite>/usr</cite></li>
+<li>Executable: <cite>INSTALLATION/bin/hg</cite></li>
+</ul>
+<p>In the Shell section fill the shell executable with <cite>/bin/bash</cite>.</p>
+<p>Then press the &#8220;Save&#8221; button in the bottom of the page.</p>
+</div>
+<div class="section" id="configuring-a-job-step-by-step">
+<h3>Configuring a Job Step by Step<a class="headerlink" href="#configuring-a-job-step-by-step" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Go to the home of the Hudson web interface</li>
+<li>Click <em>New Job</em></li>
+<li>Pick a name for the job - pip, for instance</li>
+<li>Mark the option &#8220;Build a free-style software project&#8221;</li>
+<li>Press &#8220;OK&#8221; button</li>
+</ul>
+<p>Now you were redirected to the job&#8217;s configuration page. Here you will
+tell Hudson how it will build your job. The most important
+steps are listed (assume Mercurial plugin is installed):</p>
+<ul class="simple">
+<li>Check &#8220;Mercurial&#8221; in Source Control Management section</li>
+<li>Fill in the repository URL with <strong>http://bitbucket.org/ianb/pip</strong></li>
+<li>Mark &#8220;Build periodically&#8221; in <em>Build Triggers</em> section</li>
+<li>Add &#8220;0 0 * * *&#8221; (without quotes) to tell hudson you want to
+run your build everyday at midnight</li>
+<li>Click &#8220;Add Build Step&#8221; in the <em>Build</em> section and pick &#8220;Execute Shell&#8221;</li>
+</ul>
+<p>This box will contain all code you want your build run. To run pip&#8217;s tests
+we need to install pip tests&#8217;s depencies and run nosetests.
+Add the following lines to the box (it assumes you have virtualenv
+in your system&#8217;s python):</p>
+<div class="highlight-python"><pre>python -mvirtualenv --no-site-packages pip_virtualenv
+source pip_virtualenv/bin/activate
+cd $WORKSPACE/..
+easy_install -U pip
+cd $WORKSPACE
+pip install virtualenv scripttest nose
+nosetests tests -v</pre>
+</div>
+<p>The <em>$WORKSPACE</em> environment variable is the current build workspace,
+in the case above it is the clone repository path. The <cite>cd</cite> stuff is
+a work around to a pip&#8217;s bug.</p>
+<p>The process execute above means:</p>
+<ul class="simple">
+<li>create a virtualenv called <strong>pip_virtualenv</strong> without shared site-packages</li>
+<li>activate the environment</li>
+<li>updates system&#8217;s pip</li>
+<li>install pip tests&#8217;s dependencies</li>
+<li>run nosetests in the current directory</li>
+</ul>
+<p>Press the &#8220;Save&#8221; button and in the next page test if the build is correct
+by clicking &#8220;Build now&#8221; button.</p>
+<p>In the left sidebar will appear the run builds and the running (if exists).
+Click the top build, then &#8220;Console Output&#8221;. Now you can
+watch what Hudson is doing to build your job and watch the results.</p>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>If you change anything in your system environment, like updating
+your environment configuration files, and realize Hudson
+didn&#8217;t catch your changes, try restarting it:</p>
+<div class="highlight-python"><pre>$ [sudo] service hudson stop
+$ [sudo] service hudson start</pre>
+</div>
+<p>If when you run the <cite>start</cite> command you get an error telling you the port
+is being used, wait about 2 or 3 seconds and try the command again - it&#8217;s the
+time the port releasing may take.</p>
+<p>What is covered here is the basic knowledge to start setting up and using
+a Hudson server, the goal is not teaching all about Hudson or all about
+how to set up every detail.</p>
+<p>There is a running Hudson server aimed for pip project here:
+<a class="reference external" href="http://ci.cloudsilverlining.org/view/pip">http://ci.cloudsilverlining.org/view/pip</a></p>
+</div>
+<div class="section" id="creating-a-windows-slave-to-run-jobs">
+<h2>Creating a Windows Slave to Run Jobs<a class="headerlink" href="#creating-a-windows-slave-to-run-jobs" title="Permalink to this headline">¶</a></h2>
+<p>After starting Hudson on Linux, start your Windows machine and access the
+Hudson web interface.</p>
+<div class="section" id="adding-a-windows-node-to-hudson-ci-server">
+<h3>Adding a Windows Node to Hudson CI Server<a class="headerlink" href="#adding-a-windows-node-to-hudson-ci-server" title="Permalink to this headline">¶</a></h3>
+<p>Click &#8220;Manage Hudson&#8221;, &#8220;Manage Nodes&#8221;, &#8220;New Node&#8221;. The <strong>Node name</strong> value
+must be the Windows machine domain name - mywindowsslave.myhost.com, for
+instance.</p>
+<p>The &#8220;Launch method&#8221; should be <strong>Launch slave agents via JNLP</strong></p>
+<a class="reference external image-reference" href="_static/launch-jnlp-slave.JPG"><img alt="_images/launch-jnlp-slave.JPG" src="_images/launch-jnlp-slave.JPG" style="width: 500px;" /></a>
+<p>Then press the <strong>Add</strong> button, and in the next page click
+the <strong>Launch</strong> icon.</p>
+<a class="reference external image-reference" href="_static/launch-jnlp-slave.JPG"><img alt="_images/slave-launch-icon.png" src="_images/slave-launch-icon.png" style="width: 500px;" /></a>
+<p>Now you are able to create jobs tied to this Windows machine.</p>
+</div>
+<div class="section" id="creating-tied-jobs">
+<h3>Creating Tied Jobs<a class="headerlink" href="#creating-tied-jobs" title="Permalink to this headline">¶</a></h3>
+<p>The process of creating a job is almost the same as the list in the
+<a class="reference external" href="#creating-a-job">Creating a Job</a> section, the only difference is that you need
+to mark the <strong>Tie this project to a node</strong> option and select what
+node you want to run that build.</p>
+<p>There is a difference in build commands, relying on variables. On Linux
+they all start with <cite>$</cite>, like <cite>$WORKSPACE</cite>.
+In Windows they will be enclosed by <cite>%</cite>,  like <cite>%WORKSPACE%</cite>. And everything
+you were doing depending on Bash, you will need to change to DOS
+prompt commands and batch files.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Hudson CI server installation step by step</a><ul>
+<li><a class="reference internal" href="#why-hudson">Why Hudson</a></li>
+<li><a class="reference internal" href="#java-and-its-dependencies">Java and its dependencies</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#apache">Apache</a></li>
+<li><a class="reference internal" href="#plugins">Plugins</a></li>
+<li><a class="reference internal" href="#creating-a-job">Creating a Job</a><ul>
+<li><a class="reference internal" href="#before-creating-a-job-for-pip">Before Creating a Job for pip</a></li>
+<li><a class="reference internal" href="#configuring-a-job-step-by-step">Configuring a Job Step by Step</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#creating-a-windows-slave-to-run-jobs">Creating a Windows Slave to Run Jobs</a><ul>
+<li><a class="reference internal" href="#adding-a-windows-node-to-hudson-ci-server">Adding a Windows Node to Hudson CI Server</a></li>
+<li><a class="reference internal" href="#creating-tied-jobs">Creating Tied Jobs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008-2011, The pip developers.
+      Last updated on Mar 06, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

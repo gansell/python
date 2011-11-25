@@ -1,0 +1,3 @@
+LIBRARY count_ext.pyd
+EXPORTS
+initcount_ext

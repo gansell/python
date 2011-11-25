@@ -1,0 +1,208 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration &mdash; pip v0.8.2 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pip v0.8.2 documentation" href="index.html" />
+    <link rel="next" title="How To Contribute to Pip" href="how-to-contribute.html" />
+    <link rel="prev" title="The requirements file format" href="requirement-format.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="how-to-contribute.html" title="How To Contribute to Pip"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="requirement-format.html" title="The requirements file format"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>pip allows you to set its default options by using the following facilities,
+in the order of each item&#8217;s importance:</p>
+<ol class="arabic simple">
+<li>Command line options</li>
+<li><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+<li><a class="reference internal" href="#config-files">Config files</a><ol class="arabic">
+<li>Command specific section, e.g. <tt class="docutils literal"><span class="pre">[install]</span></tt></li>
+<li>Global section <tt class="docutils literal"><span class="pre">[global]</span></tt></li>
+</ol>
+</li>
+</ol>
+<p>That means it will check each of those configuration sources and set the
+defaults appropriately.</p>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">--host=foo</span></tt> overrides <tt class="docutils literal"><span class="pre">PIP_HOST=foo</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">PIP_HOST=foo</span></tt> overrides a config file with <tt class="docutils literal"><span class="pre">[global]</span> <span class="pre">host</span> <span class="pre">=</span> <span class="pre">foo</span></tt></li>
+<li>A command specific section in the config file <tt class="docutils literal"><span class="pre">[&lt;command&gt;]</span> <span class="pre">host</span> <span class="pre">=</span> <span class="pre">bar</span></tt>
+overrides the option with same name in the <tt class="docutils literal"><span class="pre">[global]</span></tt> config file section</li>
+<li>Environment variables override config files</li>
+</ul>
+</div>
+<div class="section" id="config-files">
+<h2>Config files<a class="headerlink" href="#config-files" title="Permalink to this headline">¶</a></h2>
+<p>pip allows you to set all command line option defaults in a standard ini
+style config file.</p>
+<p>The names of the settings are derived from the long command line option, e.g.
+if you want to use a different package index (<tt class="docutils literal"><span class="pre">--index-url</span></tt>) and set the
+HTTP timeout (<tt class="docutils literal"><span class="pre">--default-timeout</span></tt>) to 60 seconds your config file would
+look like this:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[global]</span>
+<span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+<span class="na">index-url</span> <span class="o">=</span> <span class="s">http://download.zope.org/ppix</span>
+</pre></div>
+</div>
+<p>Each subcommand can be configured optionally in its own section so that every
+global setting with the same name will be overridden; e.g. decreasing the
+<tt class="docutils literal"><span class="pre">timeout</span></tt> to <tt class="docutils literal"><span class="pre">10</span></tt> seconds when running the <cite>freeze</cite>
+(<a href="#id1"><span class="problematic" id="id2">`Freezing Requirements`_</span></a>) command and using <tt class="docutils literal"><span class="pre">60</span></tt> seconds for all other
+commands is possible with:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[global]</span>
+<span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+
+<span class="k">[freeze]</span>
+<span class="na">timeout</span> <span class="o">=</span> <span class="s">10</span>
+</pre></div>
+</div>
+<p>Boolean options like <tt class="docutils literal"><span class="pre">--ignore-installed</span></tt> or <tt class="docutils literal"><span class="pre">--no-dependencies</span></tt> can be
+set like this:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[install]</span>
+<span class="na">ignore-installed</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">no-dependencies</span> <span class="o">=</span> <span class="s">yes</span>
+</pre></div>
+</div>
+<p>Appending options like <tt class="docutils literal"><span class="pre">--find-links</span></tt> can be written on multiple lines:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[global]</span>
+<span class="na">find-links</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    http://download.example.com</span>
+
+<span class="k">[install]</span>
+<span class="na">find-links</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    http://mirror1.example.com</span>
+<span class="s">    http://mirror2.example.com</span>
+</pre></div>
+</div>
+<div class="section" id="location">
+<h3>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h3>
+<p>The names and locations of the configuration files vary slightly across
+platforms.</p>
+<p>On Unix and Mac OS X the configuration file is: <tt class="file docutils literal"><span class="pre">$HOME/.pip/pip.conf</span></tt></p>
+<p>And on Windows, the configuration file is: <tt class="file docutils literal"><span class="pre">%HOME%\pip\pip.ini</span></tt></p>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>Just like with <a class="reference internal" href="#config-files">config files</a>, each of pip&#8217;s command line options
+(long version, e.g. <tt class="docutils literal"><span class="pre">--find-links</span></tt>) are automatically set by looking for
+environment variables with the name format <tt class="docutils literal"><span class="pre">PIP_&lt;UPPER_NAME&gt;</span></tt>. That means
+the name of the command line options are capitalized and have dashes (<tt class="docutils literal"><span class="pre">-</span></tt>)
+replaced with underscores (<tt class="docutils literal"><span class="pre">_</span></tt>).</p>
+<p>For example, to redefine the default timeout you can also set an
+environment variable:</p>
+<div class="highlight-python"><pre>export PIP_DEFAULT_TIMEOUT=60
+pip install ipython</pre>
+</div>
+<p>Which is the same as passing the option to pip directly:</p>
+<div class="highlight-python"><pre>pip --default-timeout=60 install ipython</pre>
+</div>
+<p>This also works for appending command line options, like <tt class="docutils literal"><span class="pre">--find-links</span></tt>.
+Just leave an empty space between the passsed values, e.g.:</p>
+<div class="highlight-python"><pre>export PIP_FIND_LINKS="http://mirror1.example.com http://mirror2.example.com"</pre>
+</div>
+<p>is the same as calling:</p>
+<div class="highlight-python"><pre>pip install --find-links=http://mirror1.example.com --find-links=http://mirror2.example.com</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#config-files">Config files</a><ul>
+<li><a class="reference internal" href="#location">Location</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="requirement-format.html"
+                        title="previous chapter">The requirements file format</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="how-to-contribute.html"
+                        title="next chapter">How To Contribute to Pip</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="how-to-contribute.html" title="How To Contribute to Pip"
+             >next</a></li>
+        <li class="right" >
+          <a href="requirement-format.html" title="The requirements file format"
+             >previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008-2011, The pip developers.
+      Last updated on Mar 06, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The requirements file format &mdash; pip v0.8.2 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pip v0.8.2 documentation" href="index.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="News for pip" href="news.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="configuration.html" title="Configuration"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="news.html" title="News for pip"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-requirements-file-format">
+<h1>The requirements file format<a class="headerlink" href="#the-requirements-file-format" title="Permalink to this headline">¶</a></h1>
+<p>The requirements file is a way to get pip to install specific packages
+to make up an <em>environment</em>.  This document describes that format.  To
+read about <em>when</em> you should use requirement files, see <a class="reference external" href="./#requirements-files">Requirements
+Files</a>.</p>
+<p>Each line of the requirements file indicates something to be
+installed.  For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">MyPackage</span><span class="o">==</span><span class="mf">3.0</span>
+</pre></div>
+</div>
+<p>tells pip to install the 3.0 version of MyPackage.</p>
+<p>You can also install a package in an &#8220;editable&#8221; form.  This puts the
+source code into <tt class="docutils literal"><span class="pre">src/distname</span></tt> (making the name lower case) and
+runs <tt class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">develop</span></tt> on the package.  To indicate
+editable, use <tt class="docutils literal"><span class="pre">-e</span></tt>, like:</p>
+<div class="highlight-python"><pre>-e svn+http://svn.myproject.org/svn/MyProject/trunk#egg=MyProject</pre>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">#egg=MyProject</span></tt> part is important, because while you can
+install simply given the svn location, the project name is useful in
+other places.</p>
+<p>If you need to give pip (and by association easy_install) hints
+about where to find a package, you can use the <tt class="docutils literal"><span class="pre">-f</span></tt>
+(<tt class="docutils literal"><span class="pre">--find-links</span></tt>) option, like:</p>
+<div class="highlight-python"><pre>$ pip -f http://someserver.org/index-of-packages MyPackage==3.0</pre>
+</div>
+<p>Pip will then look for a link at <a class="reference external" href="http://someserver.org/index-of-packages">http://someserver.org/index-of-packages</a>
+that matches version <tt class="docutils literal"><span class="pre">3.0</span></tt> of <tt class="docutils literal"><span class="pre">MyPackage</span></tt> &#8211; the link should be
+like <tt class="docutils literal"><span class="pre">MyPackage-3.0.tar.gz</span></tt>.</p>
+<p>And if you want to install from a tarball or zip file with a direct link,
+you don&#8217;t need <tt class="docutils literal"><span class="pre">-f</span></tt> option, you just need to pass the absolute url, like:</p>
+<div class="highlight-python"><pre>$ pip install http://someserver.org/packages/MyPackage-3.0.tar.gz</pre>
+</div>
+<div class="section" id="version-control">
+<h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<p>Right now pip knows of the following major version control systems:</p>
+<div class="section" id="subversion">
+<h3>Subversion<a class="headerlink" href="#subversion" title="Permalink to this headline">¶</a></h3>
+<p>Pip supports the URL schemes <tt class="docutils literal"><span class="pre">svn</span></tt>, <tt class="docutils literal"><span class="pre">svn+http</span></tt>, <tt class="docutils literal"><span class="pre">svn+https</span></tt>, <tt class="docutils literal"><span class="pre">svn+ssh</span></tt>.
+You can also give specific revisions to an SVN URL, like:</p>
+<div class="highlight-python"><pre>-e svn+http://svn.myproject.org/svn/MyProject/trunk@2019#egg=MyProject</pre>
+</div>
+<p>which will check out revision 2019.  <tt class="docutils literal"><span class="pre">&#64;{20080101}</span></tt> would also check
+out the revision from 2008-01-01. You can only check out specific
+revisions using <tt class="docutils literal"><span class="pre">-e</span> <span class="pre">svn+...</span></tt>.</p>
+</div>
+<div class="section" id="git">
+<h3>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h3>
+<p>Pip currently supports cloning over <tt class="docutils literal"><span class="pre">git</span></tt>, <tt class="docutils literal"><span class="pre">git+http</span></tt> and <tt class="docutils literal"><span class="pre">git+ssh</span></tt>:</p>
+<div class="highlight-python"><pre>-e git://git.myproject.org/MyProject.git#egg=MyProject
+-e git+http://git.myproject.org/MyProject/#egg=MyProject
+-e git+ssh://git@myproject.org/MyProject/#egg=MyProject</pre>
+</div>
+<p>Passing branch names, a commit hash or a tag name is also possible:</p>
+<div class="highlight-python"><pre>-e git://git.myproject.org/MyProject.git@master#egg=MyProject
+-e git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
+-e git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject</pre>
+</div>
+</div>
+<div class="section" id="mercurial">
+<h3>Mercurial<a class="headerlink" href="#mercurial" title="Permalink to this headline">¶</a></h3>
+<p>The supported schemes are: <tt class="docutils literal"><span class="pre">hg+http</span></tt>, <tt class="docutils literal"><span class="pre">hg+https</span></tt>,
+<tt class="docutils literal"><span class="pre">hg+static-http</span></tt> and <tt class="docutils literal"><span class="pre">hg+ssh</span></tt>:</p>
+<div class="highlight-python"><pre>-e hg+http://hg.myproject.org/MyProject/#egg=MyProject
+-e hg+https://hg.myproject.org/MyProject/#egg=MyProject
+-e hg+ssh://hg@myproject.org/MyProject/#egg=MyProject</pre>
+</div>
+<p>You can also specify a revision number, a revision hash, a tag name or a local
+branch name:</p>
+<div class="highlight-python"><pre>-e hg+http://hg.myproject.org/MyProject/@da39a3ee5e6b#egg=MyProject
+-e hg+http://hg.myproject.org/MyProject/@2019#egg=MyProject
+-e hg+http://hg.myproject.org/MyProject/@v1.0#egg=MyProject
+-e hg+http://hg.myproject.org/MyProject/@special_feature#egg=MyProject</pre>
+</div>
+</div>
+<div class="section" id="bazaar">
+<h3>Bazaar<a class="headerlink" href="#bazaar" title="Permalink to this headline">¶</a></h3>
+<p>Pip supports Bazaar using the <tt class="docutils literal"><span class="pre">bzr+http</span></tt>, <tt class="docutils literal"><span class="pre">bzr+https</span></tt>, <tt class="docutils literal"><span class="pre">bzr+ssh</span></tt>,
+<tt class="docutils literal"><span class="pre">bzr+sftp</span></tt> and <tt class="docutils literal"><span class="pre">bzr+ftp</span></tt> schemes:</p>
+<div class="highlight-python"><pre>-e bzr+http://bzr.myproject.org/MyProject/trunk/#egg=MyProject
+-e bzr+sftp://user@myproject.org/MyProject/trunk/#egg=MyProject
+-e bzr+ssh://user@myproject.org/MyProject/trunk/#egg=MyProject
+-e bzr+ftp://user@myproject.org/MyProject/trunk/#egg=MyProject</pre>
+</div>
+<p>Tags or revisions can be installed like this:</p>
+<div class="highlight-python"><pre>-e bzr+https://bzr.myproject.org/MyProject/trunk/@2019#egg=MyProject
+-e bzr+http://bzr.myproject.org/MyProject/trunk/@v1.0#egg=MyProject</pre>
+</div>
+</div>
+</div>
+<div class="section" id="recursive-requirements">
+<h2>Recursive Requirements<a class="headerlink" href="#recursive-requirements" title="Permalink to this headline">¶</a></h2>
+<p>If you wish, you can also refer to other requirements files, like:</p>
+<div class="highlight-python"><pre>-r Pylons-requirements.txt</pre>
+</div>
+<p>This gives you a way of abstracting out sets of requirements.  This
+isn&#8217;t, however, very friendly with <a class="reference external" href="./#freezing-requirements">frozen requirements</a>, as everything in
+<tt class="docutils literal"><span class="pre">Pylons-requirements.txt</span></tt> will show up in your frozen file.</p>
+</div>
+<div class="section" id="indexes-find-links">
+<h2>Indexes, find-links<a class="headerlink" href="#indexes-find-links" title="Permalink to this headline">¶</a></h2>
+<p>You can also provide values for the <tt class="docutils literal"><span class="pre">--index-url</span></tt> and <tt class="docutils literal"><span class="pre">--find-links</span></tt>
+options in your requirement files, like:</p>
+<div class="highlight-python"><pre>--index-url http://example.com/private-pypi/</pre>
+</div>
+<p>Note that using <tt class="docutils literal"><span class="pre">--index-url</span></tt> removes the use of <a class="reference external" href="http://pypi.python.org">PyPI</a>, while using <tt class="docutils literal"><span class="pre">--extra-index-url</span></tt> will add
+additional indexes.</p>
+<p><tt class="docutils literal"><span class="pre">--find-links</span></tt> is more ad-hoc; instead of a complete &#8220;index&#8221;, you
+only need an HTML page of links to available packages.  Simply by
+putting all your private packages in a directory and using the Apache
+auto-index, you can publish your packages so pip can find them.
+<tt class="docutils literal"><span class="pre">--find-links</span></tt> is always additive; pip looks at everything it can
+find.  Use it like:</p>
+<div class="highlight-python"><pre>--find-links http://example.com/private-packages/</pre>
+</div>
+<p>Note that all these options must be on a line of their own.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The requirements file format</a><ul>
+<li><a class="reference internal" href="#version-control">Version Control</a><ul>
+<li><a class="reference internal" href="#subversion">Subversion</a></li>
+<li><a class="reference internal" href="#git">Git</a></li>
+<li><a class="reference internal" href="#mercurial">Mercurial</a></li>
+<li><a class="reference internal" href="#bazaar">Bazaar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#recursive-requirements">Recursive Requirements</a></li>
+<li><a class="reference internal" href="#indexes-find-links">Indexes, find-links</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="news.html"
+                        title="previous chapter">News for pip</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="configuration.html"
+                        title="next chapter">Configuration</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="configuration.html" title="Configuration"
+             >next</a></li>
+        <li class="right" >
+          <a href="news.html" title="News for pip"
+             >previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008-2011, The pip developers.
+      Last updated on Mar 06, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

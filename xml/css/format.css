@@ -1,0 +1,54 @@
+
+* {
+/* hide everything that's not explicitly shown below */
+display: none;
+}
+
+cityindex {
+/* show document in full window width */
+display: block;
+width: 100%;
+padding: 10px;
+}
+
+title {
+/* main document title: centered, large, blue  */
+display: block;
+text-align: center;
+color: blue;
+font-size: 25pt;
+}
+
+entry {
+/* each city entry: normal font size, visible margin to next entry */
+display: block;
+margin-bottom: 30pt;
+font-size: 12pt;
+}
+
+city, country, region, inhabitants, description {
+/* explicit list of city attributes to show (overrides 'none' above) */
+display: block;
+}
+
+city {
+/* mark city name in large red letters */
+color: darkred;
+font-size: 16pt;
+font-weight: bold;
+}
+
+city > * {
+/* indent all (visible) children of 'city' tag */
+margin-left: 20pt;
+}
+
+country, region, inhabitants {
+/* city characteristics marked in blue */
+color: darkblue;
+}
+
+inhabitants:before {
+/* insert textual content before the tag (German for "inhabitants") */
+content: "Einwohner: ";
+}

@@ -1,0 +1,490 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>News for pip &mdash; pip v0.8.2 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pip v0.8.2 documentation" href="index.html" />
+    <link rel="next" title="The requirements file format" href="requirement-format.html" />
+    <link rel="prev" title="pip" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="requirement-format.html" title="The requirements file format"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="pip"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="news-for-pip">
+<h1>News for pip<a class="headerlink" href="#news-for-pip" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tip">
+<h2>tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed issue #14 - No uninstall-on-upgrade with URL package. Thanks Oliver Tonnhofer</li>
+<li>Fixed issue #163 - Egg name not properly resolved. Thanks Igor Sobreira</li>
+<li>Fixed issue #178 - Non-alphabetical installation of requirements. Thanks Igor Sobreira</li>
+<li>Fixed issue #199 - Documentation mentions &#8211;index instead of &#8211;index-url. Thanks Kelsey Hightower</li>
+<li>Fixed issue #204 - rmtree undefined in mercurial.py. Thanks Kelsey Hightower</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>0.8.2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Avoid redundant unpacking of bundles (from pwaller)</p>
+</li>
+<li><p class="first">Fixed issue #32, #150, #161 - Fixed checking out the correct
+tag/branch/commit when updating an editable Git requirement.</p>
+</li>
+<li><p class="first">Fixed issue #49 - Added ability to install version control requirements
+without making them editable, e.g.:</p>
+<div class="highlight-python"><pre>pip install hg+http://bitbucket.org/ianb/pip/</pre>
+</div>
+</li>
+<li><p class="first">Fixed issue #175 - Correctly locate build and source directory on Mac OS X.</p>
+</li>
+<li><p class="first">Added <tt class="docutils literal"><span class="pre">git+https://</span></tt> scheme to Git VCS backend.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>0.8.1<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added global &#8211;user flag as shortcut for &#8211;install-option=&#8221;&#8211;user&#8221;. From
+Ronny Pfannschmidt.</li>
+<li>Added support for <a class="reference external" href="http://pypi.python.org/mirrors">PyPI mirrors</a> as
+defined in <a class="reference external" href="http://www.python.org/dev/peps/pep-0381/">PEP 381</a>, from
+Jannis Leidel.</li>
+<li>Fixed issue #138 - Git revisions ignored. Thanks John-Scott Atlakson.</li>
+<li>Fixed issue #95 - Initial editable install of github package from a tag fails. Thanks John-Scott Atlakson.</li>
+<li>Fixed issue #107 - Can&#8217;t install if a directory in cwd has the same name as the package you&#8217;re installing.</li>
+<li>Fixed issue #39 - &#8211;install-option=&#8221;&#8211;prefix=~/.local&#8221; ignored with -e.</li>
+</ul>
+<p>Thanks Ronny Pfannschmidt and Wil Tan.</p>
+</div>
+<div class="section" id="id3">
+<h2>0.8<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Track which <tt class="docutils literal"><span class="pre">build/</span></tt> directories pip creates, never remove directories
+it doesn&#8217;t create.  From Hugo Lopes Tavares.</li>
+<li>Pip now accepts <a class="reference external" href="file://">file://</a> index URLs. Thanks Dave Abrahams.</li>
+<li>Various cleanup to make test-running more consistent and less fragile.
+Thanks Dave Abrahams.</li>
+<li>Real Windows support (with passing tests). Thanks Dave Abrahams.</li>
+<li><tt class="docutils literal"><span class="pre">pip-2.7</span></tt> etc. scripts are created (Python-version specific scripts)</li>
+<li><tt class="docutils literal"><span class="pre">contrib/build-standalone</span></tt> script creates a runnable <tt class="docutils literal"><span class="pre">.zip</span></tt> form of
+pip, from Jannis Leidel</li>
+<li>Editable git repos are updated when reinstalled</li>
+<li>Fix problem with <tt class="docutils literal"><span class="pre">--editable</span></tt> when multiple <tt class="docutils literal"><span class="pre">.egg-info/</span></tt> directories
+are found.</li>
+<li>A number of VCS-related fixes for <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">freeze</span></tt>, from Hugo Lopes Tavares.</li>
+<li>Significant test framework changes, from Hugo Lopes Tavares.</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>0.7.2<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Set zip_safe=False to avoid problems some people are encountering where
+pip is installed as a zip file.</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>0.7.1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed opening of logfile with no directory name. Thanks Alexandre Conrad.</li>
+<li>Temporary files are consistently cleaned up, especially after
+installing bundles, also from Alex Conrad.</li>
+<li>Tests now require at least ScriptTest 1.0.3.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>0.7<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed uninstallation on Windows</li>
+<li>Added <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">search</span></tt> command.</li>
+<li>Tab-complete names of installed distributions for <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">uninstall</span></tt>.</li>
+<li>Support tab-completion when there is a global-option before the
+subcommand.</li>
+<li>Install header files in standard (scheme-default) location when installing
+outside a virtualenv. Install them to a slightly more consistent
+non-standard location inside a virtualenv (since the standard location is
+a non-writable symlink to the global location).</li>
+<li>pip now logs to a central location by default (instead of creating
+<tt class="docutils literal"><span class="pre">pip-log.txt</span></tt> all over the place) and constantly overwrites the
+file in question. On Unix and Mac OS X this is <tt class="docutils literal"><span class="pre">'$HOME/.pip/pip.log'</span></tt>
+and on Windows it&#8217;s <tt class="docutils literal"><span class="pre">'%HOME%\\pip\\pip.log'</span></tt>. You are still able to
+override this location with the <tt class="docutils literal"><span class="pre">$PIP_LOG_FILE</span></tt> environment variable.
+For a complete (appended) logfile use the separate <tt class="docutils literal"><span class="pre">'--log'</span></tt> command line
+option.</li>
+<li>Fixed an issue with Git that left an editable packge as a checkout of a
+remote branch, even if the default behaviour would have been fine, too.</li>
+<li>Fixed installing from a Git tag with older versions of Git.</li>
+<li>Expand &#8220;~&#8221; in logfile and download cache paths.</li>
+<li>Speed up installing from Mercurial repositories by cloning without
+updating the working copy multiple times.</li>
+<li>Fixed installing directly from directories (e.g.
+<tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">path/to/dir/</span></tt>).</li>
+<li>Fixed installing editable packages with <tt class="docutils literal"><span class="pre">svn+ssh</span></tt> URLs.</li>
+<li>Don&#8217;t print unwanted debug information when running the freeze command.</li>
+<li>Create log file directory automatically. Thanks Alexandre Conrad.</li>
+<li>Make test suite easier to run successfully. Thanks Dave Abrahams.</li>
+<li>Fixed &#8220;pip install .&#8221; and &#8220;pip install ..&#8221;; better error for directory
+without setup.py. Thanks Alexandre Conrad.</li>
+<li>Support Debian/Ubuntu &#8220;dist-packages&#8221; in zip command. Thanks duckx.</li>
+<li>Fix relative &#8211;src folder. Thanks Simon Cross.</li>
+<li>Handle missing VCS with an error message. Thanks Alexandre Conrad.</li>
+<li>Added &#8211;no-download option to install; pairs with &#8211;no-install to separate
+download and installation into two steps. Thanks Simon Cross.</li>
+<li>Fix uninstalling from requirements file containing -f, -i, or
+&#8211;extra-index-url.</li>
+<li>Leftover build directories are now removed. Thanks Alexandre Conrad.</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2>0.6.3<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed import error on Windows with regard to the backwards compatibility
+package</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>0.6.2<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed uninstall when /tmp is on a different filesystem.</li>
+<li>Fixed uninstallation of distributions with namespace packages.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>0.6.1<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added support for the <tt class="docutils literal"><span class="pre">https</span></tt> and <tt class="docutils literal"><span class="pre">http-static</span></tt> schemes to the
+Mercurial and <tt class="docutils literal"><span class="pre">ftp</span></tt> scheme to the Bazaar backend.</li>
+<li>Fixed uninstallation of scripts installed with easy_install.</li>
+<li>Fixed an issue in the package finder that could result in an
+infinite loop while looking for links.</li>
+<li>Fixed issue with <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">bundle</span></tt> and local files (which weren&#8217;t being
+copied into the bundle), from Whit Morriss.</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>0.6<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">uninstall</span></tt> and uninstall-before upgrade (from Carl
+Meyer).</li>
+<li>Extended configurability with config files and environment variables.</li>
+<li>Allow packages to be upgraded, e.g., <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Package==0.1</span></tt>
+then <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Package==0.2</span></tt>.</li>
+<li>Allow installing/upgrading to Package==dev (fix &#8220;Source version does not
+match target version&#8221; errors).</li>
+<li>Added command and option completion for bash and zsh.</li>
+<li>Extended integration with virtualenv by providing an option to
+automatically use an active virtualenv and an option to warn if no active
+virtualenv is found.</li>
+<li>Fixed a bug with pip install &#8211;download and editable packages, where
+directories were being set with 0000 permissions, now defaults to 755.</li>
+<li>Fixed uninstallation of easy_installed console_scripts.</li>
+<li>Fixed uninstallation on Mac OS X Framework layout installs</li>
+<li>Fixed bug preventing uninstall of editables with source outside venv.</li>
+<li>Creates download cache directory if not existing.</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h2>0.5.1<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed a couple little bugs, with git and with extensions.</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h2>0.5<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added ability to override the default log file name (<tt class="docutils literal"><span class="pre">pip-log.txt</span></tt>)
+with the environmental variable <tt class="docutils literal"><span class="pre">$PIP_LOG_FILE</span></tt>.</li>
+<li>Made the freeze command print installed packages to stdout instead of
+writing them to a file. Use simple redirection (e.g.
+<tt class="docutils literal"><span class="pre">pip</span> <span class="pre">freeze</span> <span class="pre">&gt;</span> <span class="pre">stable-req.txt</span></tt>) to get a file with requirements.</li>
+<li>Fixed problem with freezing editable packages from a Git repository.</li>
+<li>Added support for base URLs using <tt class="docutils literal"><span class="pre">&lt;base</span> <span class="pre">href='...'&gt;</span></tt> when parsing
+HTML pages.</li>
+<li>Fixed installing of non-editable packages from version control systems.</li>
+<li>Fixed issue with Bazaar&#8217;s bzr+ssh scheme.</li>
+<li>Added &#8211;download-dir option to the install command to retrieve package
+archives. If given an editable package it will create an archive of it.</li>
+<li>Added ability to pass local file and directory paths to <tt class="docutils literal"><span class="pre">--find-links</span></tt>,
+e.g. <tt class="docutils literal"><span class="pre">--find-links=file:///path/to/my/private/archive</span></tt></li>
+<li>Reduced the amount of console log messages when fetching a page to find a
+distribution was problematic. The full messages can be found in pip-log.txt.</li>
+<li>Added <tt class="docutils literal"><span class="pre">--no-deps</span></tt> option to install ignore package dependencies</li>
+<li>Added <tt class="docutils literal"><span class="pre">--no-index</span></tt> option to ignore the package index (PyPI) temporarily</li>
+<li>Fixed installing editable packages from Git branches.</li>
+<li>Fixes freezing of editable packages from Mercurial repositories.</li>
+<li>Fixed handling read-only attributes of build files, e.g. of Subversion and
+Bazaar on Windows.</li>
+<li>When downloading a file from a redirect, use the redirected
+location&#8217;s extension to guess the compression (happens specifically
+when redirecting to a bitbucket.org tip.gz file).</li>
+<li>Editable freeze URLs now always use revision hash/id rather than tip or
+branch names which could move.</li>
+<li>Fixed comparison of repo URLs so incidental differences such as
+presence/absence of final slashes or quoted/unquoted special
+characters don&#8217;t trigger &#8220;ignore/switch/wipe/backup&#8221; choice.</li>
+<li>Fixed handling of attempt to checkout editable install to a
+non-empty, non-repo directory.</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h2>0.4<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Make <tt class="docutils literal"><span class="pre">-e</span></tt> work better with local hg repositories</li>
+<li>Construct PyPI URLs the exact way easy_install constructs URLs (you
+might notice this if you use a custom index that is
+slash-sensitive).</li>
+<li>Improvements on Windows (from <a class="reference external" href="http://ionelmc.wordpress.com/">Ionel Maries Cristian</a>).</li>
+<li>Fixed problem with not being able to install private git repositories.</li>
+<li>Make <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">zip</span></tt> zip all its arguments, not just the first.</li>
+<li>Fix some filename issues on Windows.</li>
+<li>Allow the <tt class="docutils literal"><span class="pre">-i</span></tt> and <tt class="docutils literal"><span class="pre">--extra-index-url</span></tt> options in requirements
+files.</li>
+<li>Fix the way bundle components are unpacked and moved around, to make
+bundles work.</li>
+<li>Adds <tt class="docutils literal"><span class="pre">-s</span></tt> option to allow the access to the global site-packages if a
+virtualenv is to be created.</li>
+<li>Fixed support for Subversion 1.6.</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>0.3.1<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Improved virtualenv restart and various path/cleanup problems on win32.</li>
+<li>Fixed a regression with installing from svn repositories (when not
+using <tt class="docutils literal"><span class="pre">-e</span></tt>).</li>
+<li>Fixes when installing editable packages that put their source in a
+subdirectory (like <tt class="docutils literal"><span class="pre">src/</span></tt>).</li>
+<li>Improve <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">-h</span></tt></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>0.3<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added support for editable packages created from Git, Mercurial and Bazaar
+repositories and ability to freeze them. Refactored support for version
+control systems.</li>
+<li>Do not use <tt class="docutils literal"><span class="pre">sys.exit()</span></tt> from inside the code, instead use a
+return.  This will make it easier to invoke programmatically.</li>
+<li>Put the install record in <tt class="docutils literal"><span class="pre">Package.egg-info/installed-files.txt</span></tt>
+(previously they went in
+<tt class="docutils literal"><span class="pre">site-packages/install-record-Package.txt</span></tt>).</li>
+<li>Fix a problem with <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">freeze</span></tt> not including <tt class="docutils literal"><span class="pre">-e</span> <span class="pre">svn+</span></tt> when an
+svn structure is peculiar.</li>
+<li>Allow <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">-E</span></tt> to work with a virtualenv that uses a different
+version of Python than the parent environment.</li>
+<li>Fixed Win32 virtualenv (<tt class="docutils literal"><span class="pre">-E</span></tt>) option.</li>
+<li>Search the links passed in with <tt class="docutils literal"><span class="pre">-f</span></tt> for packages.</li>
+<li>Detect zip files, even when the file doesn&#8217;t have a <tt class="docutils literal"><span class="pre">.zip</span></tt>
+extension and it is served with the wrong Content-Type.</li>
+<li>Installing editable from existing source now works, like <tt class="docutils literal"><span class="pre">pip</span>
+<span class="pre">install</span> <span class="pre">-e</span> <span class="pre">some/path/</span></tt> will install the package in <tt class="docutils literal"><span class="pre">some/path/</span></tt>.
+Most importantly, anything that package requires will also be
+installed by pip.</li>
+<li>Add a <tt class="docutils literal"><span class="pre">--path</span></tt> option to <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">un/zip</span></tt>, so you can avoid zipping
+files that are outside of where you expect.</li>
+<li>Add <tt class="docutils literal"><span class="pre">--simulate</span></tt> option to <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">zip</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>0.2.1<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed small problem that prevented using <tt class="docutils literal"><span class="pre">pip.py</span></tt> without actually
+installing pip.</li>
+<li>Fixed <tt class="docutils literal"><span class="pre">--upgrade</span></tt>, which would download and appear to install
+upgraded packages, but actually just reinstall the existing package.</li>
+<li>Fixed Windows problem with putting the install record in the right
+place, and generating the <tt class="docutils literal"><span class="pre">pip</span></tt> script with Setuptools.</li>
+<li>Download links that include embedded spaces or other unsafe
+characters (those characters get %-encoded).</li>
+<li>Fixed use of URLs in requirement files, and problems with some blank
+lines.</li>
+<li>Turn some tar file errors into warnings.</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h2>0.2<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Renamed to <tt class="docutils literal"><span class="pre">pip</span></tt>, and to install you now do <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span>
+<span class="pre">PACKAGE</span></tt></li>
+<li>Added command <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">zip</span> <span class="pre">PACKAGE</span></tt> and <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">unzip</span> <span class="pre">PACKAGE</span></tt>.  This
+is particularly intended for Google App Engine to manage libraries
+to stay under the 1000-file limit.</li>
+<li>Some fixes to bundles, especially editable packages and when
+creating a bundle using unnamed packages (like just an svn
+repository without <tt class="docutils literal"><span class="pre">#egg=Package</span></tt>).</li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h2>0.1.4<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added an option <tt class="docutils literal"><span class="pre">--install-option</span></tt> to pass options to pass
+arguments to <tt class="docutils literal"><span class="pre">setup.py</span> <span class="pre">install</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">.svn/</span></tt> directories are no longer included in bundles, as these
+directories are specific to a version of svn &#8211; if you build a
+bundle on a system with svn 1.5, you can&#8217;t use the checkout on a
+system with svn 1.4.  Instead a file <tt class="docutils literal"><span class="pre">svn-checkout.txt</span></tt> is
+included that notes the original location and revision, and the
+command you can use to turn it back into an svn checkout.  (Probably
+unpacking the bundle should, maybe optionally, recreate this
+information &#8211; but that is not currently implemented, and it would
+require network access.)</li>
+<li>Avoid ambiguities over project name case, where for instance
+MyPackage and mypackage would be considered different packages.
+This in particular caused problems on Macs, where <tt class="docutils literal"><span class="pre">MyPackage/</span></tt> and
+<tt class="docutils literal"><span class="pre">mypackage/</span></tt> are the same directory.</li>
+<li>Added support for an environmental variable
+<tt class="docutils literal"><span class="pre">$PIP_DOWNLOAD_CACHE</span></tt> which will cache package downloads, so
+future installations won&#8217;t require large downloads.  Network access
+is still required, but just some downloads will be avoided when
+using this.</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h2>0.1.3<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Always use <tt class="docutils literal"><span class="pre">svn</span> <span class="pre">checkout</span></tt> (not <tt class="docutils literal"><span class="pre">export</span></tt>) so that
+<tt class="docutils literal"><span class="pre">tag_svn_revision</span></tt> settings give the revision of the package.</li>
+<li>Don&#8217;t update checkouts that came from <tt class="docutils literal"><span class="pre">.pybundle</span></tt> files.</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h2>0.1.2<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Improve error text when there are errors fetching HTML pages when
+seeking packages.</li>
+<li>Improve bundles: include empty directories, make them work with
+editable packages.</li>
+<li>If you use <tt class="docutils literal"><span class="pre">-E</span> <span class="pre">env</span></tt> and the environment <tt class="docutils literal"><span class="pre">env/</span></tt> doesn&#8217;t exist, a
+new virtual environment will be created.</li>
+<li>Fix <tt class="docutils literal"><span class="pre">dependency_links</span></tt> for finding packages.</li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h2>0.1.1<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed a NameError exception when running pip outside of a
+virtualenv environment.</li>
+<li>Added HTTP proxy support (from Prabhu Ramachandran)</li>
+<li>Fixed use of <tt class="docutils literal"><span class="pre">hashlib.md5</span></tt> on python2.5+ (also from Prabhu
+Ramachandran)</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>0.1<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Initial release</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">News for pip</a><ul>
+<li><a class="reference internal" href="#tip">tip</a></li>
+<li><a class="reference internal" href="#id1">0.8.2</a></li>
+<li><a class="reference internal" href="#id2">0.8.1</a></li>
+<li><a class="reference internal" href="#id3">0.8</a></li>
+<li><a class="reference internal" href="#id4">0.7.2</a></li>
+<li><a class="reference internal" href="#id5">0.7.1</a></li>
+<li><a class="reference internal" href="#id6">0.7</a></li>
+<li><a class="reference internal" href="#id7">0.6.3</a></li>
+<li><a class="reference internal" href="#id8">0.6.2</a></li>
+<li><a class="reference internal" href="#id9">0.6.1</a></li>
+<li><a class="reference internal" href="#id10">0.6</a></li>
+<li><a class="reference internal" href="#id11">0.5.1</a></li>
+<li><a class="reference internal" href="#id12">0.5</a></li>
+<li><a class="reference internal" href="#id13">0.4</a></li>
+<li><a class="reference internal" href="#id14">0.3.1</a></li>
+<li><a class="reference internal" href="#id15">0.3</a></li>
+<li><a class="reference internal" href="#id16">0.2.1</a></li>
+<li><a class="reference internal" href="#id17">0.2</a></li>
+<li><a class="reference internal" href="#id18">0.1.4</a></li>
+<li><a class="reference internal" href="#id19">0.1.3</a></li>
+<li><a class="reference internal" href="#id20">0.1.2</a></li>
+<li><a class="reference internal" href="#id21">0.1.1</a></li>
+<li><a class="reference internal" href="#id22">0.1</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">pip</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="requirement-format.html"
+                        title="next chapter">The requirements file format</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="requirement-format.html" title="The requirements file format"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="pip"
+             >previous</a> |</li>
+        <li><a href="index.html">pip v0.8.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008-2011, The pip developers.
+      Last updated on Mar 06, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
